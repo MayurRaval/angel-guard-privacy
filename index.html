@@ -22,7 +22,7 @@
 <body>
 
 <h1>Privacy Policy for Angel Guard</h1>
-<p class="meta">Last updated: 4 September 2026</p>
+<p class="meta">Last updated: 17 September 2026</p>
 
 <p>
   This policy explains how the mobile game <strong>Angel Guard</strong>
@@ -62,9 +62,30 @@
 
 <h2>Permissions</h2>
 <p>
-  The app declares the <code>INTERNET</code> permission, which Google AdMob uses
-  to request the rewarded ads described above. Your game progress is never
-  uploaded &mdash; it stays on your device. No other permissions are requested.
+  The game itself only needs internet access, which Google AdMob uses to request
+  the rewarded ads described above. Your game progress is never uploaded &mdash;
+  it stays on your device.
+</p>
+<p>
+  To show those ads, the app includes Google's Mobile Ads SDK, which adds these
+  Android permissions:
+</p>
+<ul>
+  <li><code>INTERNET</code> and <code>ACCESS_NETWORK_STATE</code> &mdash; to request
+    ads and check whether you are online</li>
+  <li><code>AD_ID</code> &mdash; to read your device's resettable advertising
+    identifier</li>
+  <li><code>ACCESS_ADSERVICES_AD_ID</code>, <code>ACCESS_ADSERVICES_ATTRIBUTION</code>
+    and <code>ACCESS_ADSERVICES_TOPICS</code> &mdash; Android's Privacy Sandbox
+    advertising features</li>
+  <li><code>READ_BASIC_PHONE_STATE</code> &mdash; basic, non-identifying device
+    information such as network type and software version</li>
+  <li><code>WAKE_LOCK</code> and <code>FOREGROUND_SERVICE</code> &mdash; used by
+    Android's background task scheduler, which the ads SDK relies on</li>
+</ul>
+<p>
+  The app does not request access to your precise location, contacts, camera,
+  microphone, photos or files.
 </p>
 
 <h2>Advertising</h2>
@@ -76,7 +97,9 @@
 <p>
   Ads are provided by <strong>Google AdMob</strong>. To serve and measure them,
   Google may collect and process information such as your device's advertising
-  identifier, IP address, device type and ad interactions. This processing is
+  identifier, your IP address (and the approximate location derived from it),
+  device type, ad interactions, and diagnostic information about ad and app
+  performance. This processing is
   Google's, under the
   <a href="https://policies.google.com/technologies/partner-sites">Google Privacy
   &amp; Terms</a>. We do not receive or store this data ourselves.
@@ -132,8 +155,8 @@
 
 <h2>Changes to this policy</h2>
 <p>
-  If a future version of the app introduces anything that collects data — such as
-  advertising, analytics, cloud saves or in-app purchases — this policy will be
+  If a future version of the app changes what data is collected — for example by
+  adding analytics, cloud saves or in-app purchases — this policy will be
   updated before that version is released, and the "last updated" date above will
   change. Please check back after updates.
 </p>
